@@ -1,42 +1,33 @@
-# A starter project for React/Redux
+# Team 'Rookies' (Sarah, Simon, Natalie & Jess)
 
-> A minimalistic React/Redux starter project
+# Project: WeBeTrippin
 
-To use:
 
-* Fork this repo
-* Rename your repo according to the app you're building
+## User Stories
+- I can click a drop down menu to find a country and city
+- I can look for attractions in a city that I'm planning to visit
+- I can add my own city
+- I can add my own attraction
 
-```sh
-git clone https://github.com/[your-org]/[your-app].git
-cd [your-app] && npm install
-```
+## MVP
+- A user can visit our app, click on a menu which will reveal a drop down list of countries, they then click on a country and this reveals another drop down list cities. The user then selects a city, which shows a list of attractions available in that city.
 
-This is the structure of this boilerplate:
+## Method
+- Complete wireframes
+- Complete file structure and install technologies
+- Delegate roles
+- Write memory data
+- Write first feature tests
+- Write first feature
+- 
 
-```sh
-.
-├── client
-│   ├── actions
-│   │   └── index.js
-│   ├── components
-│   │   ├── App.jsx
-│   │   └── Word.jsx
-│   ├── containers
-│   │   ├── AddWord.jsx
-│   │   └── Words.js
-│   ├── reducers
-│   │   ├── index.js
-│   │   └── words.js
-│   └── index.js
-├── public
-│   ├── index.html
-│   └── main.css
-├── server
-│   ├── index.js
-│   └── server.js
-├── .gitignore
-├── package.json
-├── README.md
-└── webpack.config.js
-```
+## Learning Objectives
+- Natalie: Consolidate learning
+- Jess: Building with less handholding
+- Sarah: Improve understanding of react and redux
+- Simon: Build understanding of react and redux, particularly stateful components
+
+
+## Stretch 
+- Include more options for each city
+- Allow the user to add their own countries and cities
