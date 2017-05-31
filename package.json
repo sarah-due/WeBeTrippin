@@ -4,7 +4,9 @@
   "description": "React Redux using express",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon --watch server server/index & webpack --watch",
+    "dev": "nodemon --watch server server/index & webpack --watch",
+    "test": "ava -v 'test/**/*.test.js'",
+    "start": "node server/index",
     "watch": "nodemon -e js,jsx -x npm test"
   },
   "keywords": [
@@ -14,15 +16,19 @@
   "author": "EDA",
   "license": "ISC",
   "devDependencies": {
+    "ava": "^0.19.1",
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
+    "enzyme": "^2.8.2",
+    "nock": "^9.0.13",
     "nodemon": "^1.11.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "supertest": "^3.0.0",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   },
@@ -34,6 +40,8 @@
   },
   "dependencies": {
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "superagent": "^3.5.2"
   }
 }
