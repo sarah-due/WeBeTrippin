@@ -1,11 +1,9 @@
 /// Temp hard-coded data ///
 
-module.exports = {
-  data
-}
 
 
-  data: [
+
+  const data = [
     {
       id: 1,
       country: 'New Zealand',
@@ -20,10 +18,8 @@ module.exports = {
       attraction: 'Go to the Australian Open at Melbourne!',
       img: '#'
     },
+]
 
-
-
-
-function getCountries() {
-  return countries
+module.exports = {
+  data
 }

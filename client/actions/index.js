@@ -7,3 +7,10 @@ export const addWord = (word) => {
     word
   }
 }
+
+export const fetchCities = (country) => {
+  return {
+    type: 'FETCH_CITIES',
+    country
+  }
+}

@@ -1,7 +1,9 @@
 import {combineReducers} from 'redux'
 
-import words from './countries'
+import countries from './countries'
+import cities from './cities'
 
 export default combineReducers({
-  countries
+  countries,
+  cities
 })
