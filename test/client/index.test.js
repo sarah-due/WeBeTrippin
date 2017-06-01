@@ -4,14 +4,13 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 
 import App from '../../client/components/App'
-import * as api from '../../client/api'
 
 App.prototype.componentDidMount = () => {}
 
-// test('<App />', t => {
-//   const wrapper = shallow(<App />)
-//   t.is(wrapper.find('h1').text(),'Widgets FTW!')
-// })
+test('The home page shows our header', t => {
+  const wrapper = shallow(<App />)
+  t.is(wrapper.find('.container').text(),'We Be Trippin')
+})
 //
 // test.cb('mount <App />', t => {
 //   const wrapper = mount(<App />)
