@@ -3,14 +3,14 @@ import request from 'supertest'
 
 import app from '../../server/server'
 
-//the server keeps the widgets in memory so no knex setup neede
 
-// test.serial.cb('GET /widgets', t => {
-//   request(app)
-//     .get('/widgets')
-//     .expect(200)
-//     .end((err,res) => {
-//       t.is(res.body.length, 3)
-//       t.end()
-//     })
-// })
+
+test.serial.cb('GET /countries', t => {
+  request(app)
+    .get('/countries')
+    .expect(200)
+    .end((err,res) => {
+      t.deepEqual(Object.keys(res.body.length, 3))
+      t.end()
+    })
+})
