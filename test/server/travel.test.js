@@ -7,10 +7,10 @@ import app from '../../server/server'
 
 test.serial.cb('GET /countries', t => {
   request(app)
-    .get('/countries')
+    .get('/api/countries')
     .expect(200)
     .end((err,res) => {
-      t.deepEqual(Object.keys(res.body.length, 3))
+      t.deepEqual(Object.keys(res.body).length, 3)
       t.end()
     })
 })
