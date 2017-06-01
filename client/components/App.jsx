@@ -1,12 +1,10 @@
 import React from 'react'
 
-import AddWord from '../containers/AddWord'
-import Words from '../containers/Words'
+import TravelForm from './TravelForm'
 
 const App = () => (
   <div className='app-container'>
-    <Words />
-    <AddWord />
+    <TravelForm />
   </div>
 )
 
