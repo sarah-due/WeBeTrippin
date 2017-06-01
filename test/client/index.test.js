@@ -1,3 +1,4 @@
+
 import './setup-dom'
 import test from 'ava'
 import React from 'react'
