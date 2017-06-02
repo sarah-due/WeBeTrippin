@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
+import CityForm from './CityForm'
 import {fetchCities} from '../actions'
 // import * as api from '../api'
 function handleChange(e, dispatch) {
@@ -24,6 +24,7 @@ let TravelForm = (props) => {
           </p>
           <input type='submit' value='submit' />
         </form>
+        {props.cities.length != 0 && <CityForm />}
       </div>
     )
   }
@@ -32,7 +33,8 @@ let TravelForm = (props) => {
 function mapStateToProps(state) {
   console.log(state);
   return {
-    countries: state.countries
+    countries: state.countries,
+    cities: state.cities
   }
 }
 

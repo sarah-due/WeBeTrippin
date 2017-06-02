@@ -1,14 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import Attraction from './Attraction'
 
 import {fetchAttraction} from '../actions'
 
 function handleChange(e, dispatch) {
   dispatch(fetchAttraction(e.target.value))
-}
-
-function handleSubmit(e, dispatch) {
-  dispatch()
 }
 
 
@@ -21,13 +18,15 @@ let CityForm = (props) => {
         <label>Select City</label>
         <p>
           <select className="drop-menu" name="city" onChange={(e => handleChange(e, props.dispatch))}>
-            <option value="Wellington">Wellington</option>
-            <option value="Melbourne">Melbourne</option>
-            <option value="Rarotonga">Rarotonga</option>
+            <option selected disabled >Pick a City!</option>
+            {props.cities.map((city, key) => {
+              return <option value={city}>{city}</option>
+            })}
           </select>
         </p>
         <input type='submit' value='submit' />
       </form>
+      {props.attraction && <Attraction />}
     </div>
   )
 }

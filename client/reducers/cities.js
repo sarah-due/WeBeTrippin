@@ -1,7 +1,7 @@
 const initialState = require('../../data/data.js').data
 const initialCities = citiesFor(initialState)
 
-const cities = (state = initialCities, action) => {
+const cities = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_CITIES':
     console.log(action)

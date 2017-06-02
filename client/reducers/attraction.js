@@ -1,7 +1,7 @@
 const initialState = require('../../data/data.js').data
 const initialAttraction = attractionFor(initialState)
 
-const attraction = (state = initialAttraction, action) => {
+const attraction = (state = null, action) => {
   switch (action.type) {
     case 'FETCH_ATTRACTION':
     console.log(action)
