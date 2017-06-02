@@ -3,6 +3,7 @@ import './setup-dom'
 import test from 'ava'
 import React from 'react'
 import { shallow, mount } from 'enzyme'
+import store from '../../client/store'
 
 import App from '../../client/components/App'
 import TravelForm from '../../client/components/TravelForm'
@@ -20,16 +21,16 @@ test('The home page shows our header', t => {
 })
 
 test('TravelForm renders on homepage', t => {
-  const wrapper = mount(<TravelForm />)
+  const wrapper = mount(<TravelForm store={store}/>)
   t.is(wrapper.find('label').exists(),true)
 })
 
 test('TravelForm label shows correct text', t => {
-  const wrapper = mount(<TravelForm />)
+  const wrapper = mount(<TravelForm store={store}/>)
   t.is(wrapper.find('label').text(),'Select Country')
 })
 
 test('TravelForm options render correctly on homepage', t => {
-  const wrapper = mount(<TravelForm />)
+  const wrapper = mount(<TravelForm store={store}/>)
   t.is(wrapper.find('option').exists(), true)
 })
