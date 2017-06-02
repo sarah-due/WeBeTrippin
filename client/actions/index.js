@@ -13,3 +13,10 @@ export const fetchCountries = (data) => {
     data
   }
 }
+
+export const fetchAttraction = (city) => {
+  return {
+    type: 'FETCH_ATTRACTION',
+    city
+  }
+}
