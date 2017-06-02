@@ -1,9 +1,8 @@
-let nextWordId = 0
 
-export const addWord = (word) => {
+
+export const fetchCities = (country) => {
   return {
-    type: 'ADD_WORD',
-    id: nextWordId++,
-    word
+    type: 'FETCH_CITIES',
+    country
   }
 }
