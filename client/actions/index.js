@@ -7,6 +7,13 @@ export const fetchCities = (country) => {
   }
 }
 
+export const fetchCountries = (data) => {
+  return {
+    type: 'FETCH_COUNTRIES',
+    data
+  }
+}
+
 export const fetchAttraction = (city) => {
   return {
     type: 'FETCH_ATTRACTION',
