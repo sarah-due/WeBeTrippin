@@ -6,9 +6,8 @@ let Attraction = (props) => {
   console.log(props)
   return (
     <div>
-      <h1> Hello</h1>
-      <h1>{attraction}</h1>
-      <img src={img} />
+      <h1>{props.attraction}</h1>
+      <img src={props.img} />
     </div>
   )
 }

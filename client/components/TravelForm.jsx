@@ -8,10 +8,9 @@ function handleChange(e, dispatch) {
 }
 
 let TravelForm = (props) => {
-    console.log(props.countries);
     return (
       <div>
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form>
           <label>Select Country</label>
           <p>
             <select className="drop-menu" value={props.country} onChange={(e =>handleChange(e, props.dispatch))}>
@@ -22,7 +21,6 @@ let TravelForm = (props) => {
               )})}
             </select>
           </p>
-          <input type='submit' value='submit' />
         </form>
         {props.cities.length != 0 && <CityForm />}
       </div>

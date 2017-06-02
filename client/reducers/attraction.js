@@ -4,10 +4,8 @@ const initialAttraction = attractionFor(initialState)
 const attraction = (state = null, action) => {
   switch (action.type) {
     case 'FETCH_ATTRACTION':
-    console.log(action)
-      return [
-        attractionFor(initialState.filter(record => record.city == action.city))
-      ]
+    return attractionFor(initialState.filter(record => record.city == action.city))[0]
+
 
     default:
       return state

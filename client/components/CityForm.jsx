@@ -10,11 +10,10 @@ function handleChange(e, dispatch) {
 
 
 let CityForm = (props) => {
-  console.log('the cities,ey', props.cities);
-  console.log(props.attraction)
+  console.log(props)
   return (
     <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form>
         <label>Select City</label>
         <p>
           <select className="drop-menu" name="city" onChange={(e => handleChange(e, props.dispatch))}>
@@ -24,14 +23,14 @@ let CityForm = (props) => {
             })}
           </select>
         </p>
-        <input type='submit' value='submit' />
       </form>
-      {props.attraction && <Attraction />}
+      <Attraction />
     </div>
   )
 }
 
 function mapStateToProps(state) {
+  console.log(state);
   return {
     cities: state.cities,
     attraction: state.attraction
