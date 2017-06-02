@@ -7,7 +7,12 @@ import { shallow, mount } from 'enzyme'
 import App from '../../client/components/App'
 import TravelForm from '../../client/components/TravelForm'
 
-App.prototype.componentDidMount = () => {}
+App.prototype.componentDidMount = () =>
+
+test('Container class exists', t => {
+  const wrapper = mount(<App />)
+  t.is(wrapper.find('.container').exists(), true)
+})
 
 test('The home page shows our header', t => {
   const wrapper = shallow(<App />)
