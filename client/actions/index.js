@@ -14,3 +14,10 @@ export const fetchCities = (country) => {
     country
   }
 }
+
+export const fetchCountries = (data) => {
+  return {
+    type: 'FETCH_COUNTRIES',
+    data
+  }
+}
