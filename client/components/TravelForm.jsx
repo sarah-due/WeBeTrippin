@@ -1,32 +1,24 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {fetchCountries} from '../actions'
+import {fetchCities} from '../actions'
 // import * as api from '../api'
+function handleChange(e, dispatch) {
+  dispatch(fetchCities(e.target.value))
+}
 
-class TravelForm extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  handleChange(e, dispatch) {
-    dispatch(fetchCountries(e.target.value))
-  }
-
-  render() {
-    console.log(this.props.countries);
+let TravelForm = (props) => {
+    console.log(props.countries);
     return (
       <div>
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <label>Select Country</label>
           <p>
-            <select className="drop-menu" name="" value={this.props.country} onChange={(e =>this.handleChange(e, this.props.dispatch))}>
-              {this.props.countries.map((country, key) => {
+            <select className="drop-menu" value={props.country} onChange={(e =>handleChange(e, props.dispatch))}>
+              <option selected disabled>Pick a country</option>
+              {props.countries.map((country, key) => {
                 return (
-                <option>{country}</option>
+                <option value={country}>{country}</option>
               )})}
             </select>
           </p>
@@ -35,7 +27,7 @@ class TravelForm extends React.Component {
       </div>
     )
   }
-}
+
 
 function mapStateToProps(state) {
   console.log(state);
